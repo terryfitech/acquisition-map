@@ -1,0 +1,9 @@
+# Default owner for all repository changes.
+* @terryfitech
+
+# Security-sensitive surfaces.
+/.github/ @terryfitech
+/SECURITY.md @terryfitech
+/supabase/ @terryfitech
+/src/acquisition_map/security/ @terryfitech
+/infrastructure/ @terryfitech
