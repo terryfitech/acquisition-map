@@ -1,0 +1,18 @@
+* text=auto eol=lf
+
+*.ps1 text eol=crlf
+*.sh text eol=lf
+*.sql text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.jsonc text eol=lf
+
+# Evidence/binary formats must never be normalized as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.pdf binary
+*.zip binary
