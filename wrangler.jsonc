@@ -1,0 +1,21 @@
+{
+  "name": "acquisition-map-api",
+  "main": "src/acquisition_map/worker.py",
+  "compatibility_date": "2026-08-16",
+  "compatibility_flags": ["python_workers"],
+  "observability": {
+    "enabled": true
+  },
+  "secrets": {
+    "required": [
+      "SUPABASE_URL",
+      "SUPABASE_SERVICE_ROLE_KEY",
+      "FIRECRAWL_API_KEY",
+      "ZOHO_CLIENT_ID",
+      "ZOHO_CLIENT_SECRET",
+      "ZOHO_REFRESH_TOKEN",
+      "ZOHO_ACCOUNTS_BASE_URL",
+      "ZOHO_API_BASE_URL"
+    ]
+  }
+}
