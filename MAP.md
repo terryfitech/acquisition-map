@@ -50,6 +50,10 @@ acquisition-map/
 ├─ MAP.md
 ├─ ARCHITECTURE.md
 ├─ SECURITY.md
+├─ CONTRIBUTING.md
+├─ CHANGELOG.md
+├─ LICENSE
+├─ THIRD_PARTY_NOTICES.md
 ├─ pyproject.toml
 ├─ uv.lock
 ├─ wrangler.jsonc
@@ -73,11 +77,16 @@ acquisition-map/
 │  ├─ workflows/              # Durable-process definitions/interfaces
 │  └─ security/               # API/security controls
 │
+├─ scripts/                   # Windows/Unix bootstrap and verification helpers
 ├─ tests/                     # Unit/integration/contract tests
-├─ supabase/                  # Local config, migrations, seed, DB tests
+├─ supabase/                  # Local config, migrations, seed, future DB tests
 ├─ infrastructure/            # Provider setup/runbook docs
-├─ docs/                      # Specs, plans, architecture, sources, runbooks
-└─ .github/                   # CI, dependency updates, PR controls
+├─ docs/
+│  ├─ data-sources/           # Source authority/precedence
+│  ├─ security/               # Threat model, secrets, incident response
+│  ├─ setup/                  # External resources and clone/setup needs
+│  └─ superpowers/            # Approved design and execution plans
+└─ .github/                   # CI, CODEOWNERS, dependency updates, PR controls
 ```
 
 ## Source-of-Truth Matrix
