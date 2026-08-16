@@ -12,6 +12,8 @@ Read these contracts before changing the repository:
 4. [`SECURITY.md`](./SECURITY.md) — security requirements
 5. [`AGENTS.md`](./AGENTS.md) — coding-agent rules
 
+Security operations are documented in [`docs/security/`](./docs/security/), including the threat model, secret matrix, and incident-response runbook.
+
 ## Stack
 
 - Python 3.13
@@ -23,17 +25,34 @@ Read these contracts before changing the repository:
 - Zoho CRM for future human acquisition operations
 - uv + pytest + Ruff + GitHub Actions
 
-## Local Setup
+## Clone the Setup Branch
+
+Until the production-foundation PR is merged, clone and switch to the setup branch:
 
 ```bash
 git clone https://github.com/terryfitech/acquisition-map.git
 cd acquisition-map
-uv sync --all-groups
-uv run pytest
-uv run ruff check .
+git switch setup/production-foundation
 ```
 
-Cloudflare local development after secrets are configured:
+### Windows / PowerShell
+
+```powershell
+./scripts/bootstrap.ps1
+./scripts/verify.ps1
+```
+
+### Direct commands
+
+```bash
+uv sync --locked --all-groups
+uv run ruff check .
+uv run python -m compileall -q src
+uv run pytest -q
+uv run pip-audit
+```
+
+Cloudflare local development only after local/staging secrets are configured:
 
 ```bash
 cp .dev.vars.example .dev.vars
