@@ -1,0 +1,3 @@
+-- Synthetic local-development seed data only.
+-- Intentionally empty until the first domain fixture is introduced.
+-- Never copy production property, owner, contact, title, or document data here.
