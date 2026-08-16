@@ -6,6 +6,7 @@ on:
       - setup/production-foundation
     paths:
       - pyproject.toml
+      - .github/workflows/bootstrap-lock.yml
 
 permissions:
   contents: write
